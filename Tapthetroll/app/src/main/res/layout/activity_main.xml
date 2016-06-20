@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id ="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START GAME"
+            android:id="@+id/startgame"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/radioGroup"
+            android:layout_alignEnd="@+id/radioGroup" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="SELECT LEVEL"
+            android:id="@+id/textView"
+            android:layout_marginTop="67dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/radioGroup"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignStart="@+id/textView"
+                    android:layout_alignEnd="@+id/textView">
+            <RadioButton
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:text="EASY"
+                android:id="@+id/lv1"
+                android:checked="false"
+                android:layout_marginTop="26dp"
+                android:layout_below="@+id/radioButton3"
+                android:layout_centerHorizontal="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MEDIUM"
+                android:id="@+id/lv2"
+                android:checked="false"
+                android:layout_below="@+id/textView"
+                android:layout_alignStart="@+id/radioButton2" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HARD"
+                android:id="@+id/lv3"
+                android:checked="false"
+                android:layout_above="@+id/startgame"
+                android:layout_centerHorizontal="true" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXIT"
+            android:id="@+id/btn_exit"
+            android:onClick="exit"
+            android:layout_below="@+id/btn_score"
+            android:layout_alignStart="@+id/btn_team"
+            android:layout_alignEnd="@+id/btn_team"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEAM"
+            android:id="@+id/btn_team"
+            android:layout_below="@+id/startgame"
+            android:layout_alignStart="@+id/startgame"
+            android:layout_alignEnd="@+id/startgame" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ScoreBoard"
+            android:id="@+id/btn_score"
+            android:layout_below="@+id/btn_team"
+            android:layout_alignStart="@+id/btn_exit"
+            android:layout_alignEnd="@+id/btn_team"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/time"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+
